@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from surveys.models import  Question, Survey, Response
+from survey.models import  Question, Survey, Response
 
 
 # class OptionSerializer(serializers.ModelSerializer):
@@ -23,3 +23,8 @@ class QuestionSerializer(serializers.ModelSerializer):
   class Meta:
     model = Question 
     fields = ('q_id', 'q_no', 'quiz', 'survey_id','options','q_tag')
+
+
+  # def create(self, validated_data):
+  #       # Create and save a new Question instance using the validated data
+  #       return Question.objects.create(**validated_data)

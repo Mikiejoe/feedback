@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import getQuiz
+from . import views
 
 urlpatterns = [
-  path('', getQuiz) , 
+  path('', views.getQuiz) ,
+  path('/tag',views.survey_view) 
   ]
